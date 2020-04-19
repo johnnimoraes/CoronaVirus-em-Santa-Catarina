@@ -21,7 +21,7 @@ class Tabela extends React.Component {
                         <td>Table cell</td>
                         <td>Table cell</td>
                         <td>Table cell</td>
-
+                        
                     </tr>
                    
                 </tbody>
