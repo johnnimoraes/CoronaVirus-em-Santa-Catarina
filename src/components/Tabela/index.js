@@ -13,18 +13,25 @@ class Tabela extends React.Component {
     async componentDidMount() {
         const response = await api.get();
 
-        this.setState({ cidades: response.data.results });
-
+        this.setState({ cidades: response.data.results.sort(function(a,b){
+            return b.confirmed - a.confirmed ;
+        }) });
+       
         console.log(this.state.cidades);
+       
+        
+
         
     };
     
 
     render() {
 
+       const data= this.state.cidades;
 
         return (
             <div className="TabelaPrincipal ">
+                
                 <Table responsive variant="dark">
                     <thead>
                         <tr>
@@ -35,15 +42,16 @@ class Tabela extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.cidades.map(function (cidade, i) {
+                        {data.map(function (cidade, i) {
                             return (
                                 <tr key={i}>
                                     <td>{
-                                    cidade.city==null ? "Total":i+1
+                                    cidade.city==null ? "Total":i
                                     }</td>
                                     <td>{cidade.city}</td>
                                     <td>{cidade.confirmed}</td>
                                     <td>{cidade.deaths}</td>
+                                    
                                 </tr>
                             )
                         })}
