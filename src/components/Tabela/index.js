@@ -15,13 +15,12 @@ class Tabela extends React.Component {
 
         this.setState({ cidades: response.data.results });
 
-        console.log(this.state);
+        console.log(this.state.cidades);
+        
     };
-
-
+    
 
     render() {
-
 
 
         return (
@@ -36,17 +35,18 @@ class Tabela extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.cidades.map(function (cidade) {
+                        {this.state.cidades.map(function (cidade, i) {
                             return (
-                                <tr>
-                                    <td>{cidade}</td>
+                                <tr key={i}>
+                                    <td>{
+                                    cidade.city==null ? "Total":i+1
+                                    }</td>
                                     <td>{cidade.city}</td>
                                     <td>{cidade.confirmed}</td>
                                     <td>{cidade.deaths}</td>
                                 </tr>
                             )
                         })}
-
 
                     </tbody>
                 </Table>
