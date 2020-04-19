@@ -38,7 +38,7 @@ class Tabela extends React.Component {
                             <th>Ranking</th>
                             <th>Cidade</th>
                             <th>Confirmados</th>
-                            <th>Obitós</th>
+                            <th>Obitos</th>
                         </tr>
                     </thead>
                     <tbody>
