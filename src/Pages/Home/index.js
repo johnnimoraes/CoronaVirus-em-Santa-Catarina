@@ -10,12 +10,11 @@ class Home extends React.Component {
     render() {
         return (
             <div className="Home">
-                <Container fluid>
-                    <Row>
-                        <Col><Header /></Col>
-                    </Row>
-
-                    <Row>
+                <Container  >                    
+                        <Header />                    
+                </Container>
+                <Container >
+                    <Row >
                         <Col> <Tabela /></Col>
                     </Row>
                 </Container>

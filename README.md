@@ -3,4 +3,4 @@ App em reactjs para visualização dos casos de covid19 em SC, consumindo as dad
 
 Disponivel em https://coronavirussc.herokuapp.com/
 
-Novas funcionalidades serão adicionadas em breve. 
+Novas funcionalidades serão adicionadas em breve.
